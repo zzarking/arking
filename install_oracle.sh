@@ -30,7 +30,8 @@ echo "架构: ${arch}"
 
 
 install_base() {
-    apt install unzip -y
+    apt-get update -y
+    apt install wget curl unzip -y
 }
 
 install_x-ui() {
