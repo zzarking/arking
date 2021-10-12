@@ -32,8 +32,9 @@ install_base() {
 
 install_nkn() {
     echo -e "下载官方安装包"
-    sudo rm -r linux-${arch}
-    sudo rm -f linux-${arch}.zip
+    sudo rm -rf linux-${arch}
+    sudo rm -rf linux-${arch}.zip
+    sudo rm -rf install_nkn.sh
     wget -N --no-check-certificate -O /root/linux-${arch}.zip https://commercial.nkn.org/downloads/nkn-commercial/linux-${arch}.zip
     echo -e "解压系统包"
     unzip /root/linux-${arch}.zip
