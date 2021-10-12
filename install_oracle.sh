@@ -30,7 +30,6 @@ echo "架构: ${arch}"
 
 
 install_base() {
-    yum update -y
     yum install wget curl unzip -y
 }
 
