@@ -27,6 +27,7 @@ install_nkn() {
     systemctl stop nkn-commercial.service
     echo -e "删掉链包目录"
     rm -rf /root/linux-${arch}/services/nkn-node/ChainDB
+    rm -rf /root/install_up.sh
     echo -e "进入链包目录"
     cd /root/linux-${arch}/services/nkn-node/
     echo -e "下载并解压链包"
@@ -36,5 +37,5 @@ install_nkn() {
     reboot
 }
 
-echo -e "开始安装系统"
+echo -e "开始更新链包"
 install_nkn
