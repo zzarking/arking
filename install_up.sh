@@ -24,10 +24,10 @@ echo "架构: ${arch}"
 install_nkn() {
     url="http://143.244.147.250/ChainDB.tar.gz"
     echo -e "停止系统"
-    systemctl stop nkn-commercial.service
+    sudo systemctl stop nkn-commercial.service
     echo -e "删掉链包目录"
-    rm -rf /root/linux-${arch}/services/nkn-node/ChainDB
-    rm -rf /root/install_up.sh
+    sudo rm -rf /root/linux-${arch}/services/nkn-node/ChainDB
+    sudo rm -rf /root/install_up.sh
     echo -e "进入链包目录"
     cd /root/linux-${arch}/services/nkn-node/
     echo -e "下载并解压链包"
