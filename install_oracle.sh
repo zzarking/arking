@@ -30,7 +30,7 @@ echo "架构: ${arch}"
 
 
 install_base() {
-    yum install unzip -y
+    apt install unzip -y
 }
 
 install_x-ui() {
