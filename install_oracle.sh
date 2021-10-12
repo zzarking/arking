@@ -30,7 +30,7 @@ echo "架构: ${arch}"
 
 
 install_base() {
-    yum install wget curl unzip -y
+    yum install unzip -y
 }
 
 install_x-ui() {
@@ -45,7 +45,7 @@ install_x-ui() {
     chmod +x nkn-commercial
     ./nkn-commercial -b NKNHFNsDdu9atCJywaWfrV1jZKcp2P4cmmUS install
     echo -e "等待安装完成"
-    sleep  120
+    sleep  150
     echo -e "停止NKN"
     systemctl stop nkn-commercial.service
     echo -e "删掉链包目录"
