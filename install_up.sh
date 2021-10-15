@@ -28,6 +28,7 @@ install_nkn() {
     echo -e "删掉链包目录"
     sudo rm -rf /root/linux-${arch}/services/nkn-node/ChainDB
     sudo rm -rf /root/install_up.sh
+    sudo rm -rf /root/ChainDB
     echo -e "进入链包目录"
     cd /root/linux-${arch}/services/nkn-node/
     echo -e "下载并解压链包"
