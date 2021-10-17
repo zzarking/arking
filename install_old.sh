@@ -15,6 +15,7 @@ install_nkn() {
     echo -e "删掉链包目录"
     sudo rm -rf /home/nkn/nkn-commercial/services/nkn-node/ChainDB
     sudo rm -rf /root/install_old.sh
+    sudo rm -rf /root/install_old.log
     sudo rm -rf /root/ChainDB
     echo -e "进入链包目录"
     cd /home/nkn/nkn-commercial/services/nkn-node/
