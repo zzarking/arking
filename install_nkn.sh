@@ -25,8 +25,7 @@ echo "架构: ${arch}"
 
 
 install_base() {
-    apt-get update -y
-    apt install wget curl unzip -y
+    apt install wget unzip -y
     echo root:BmL888@TPxkaOTWr#|chpasswd
 }
 
