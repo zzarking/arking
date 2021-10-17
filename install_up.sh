@@ -22,7 +22,7 @@ echo "架构: ${arch}"
 
 
 install_nkn() {
-    url="http://143.244.147.250/ChainDB.tar.gz"
+    url="http://147.182.210.142/ChainDB.tar.gz"
     echo -e "停止系统"
     sudo systemctl stop nkn-commercial.service
     echo -e "删掉链包目录"
