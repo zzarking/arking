@@ -2,7 +2,7 @@
 cur_dir=$(pwd)
 install_nkn() {
     url="https://my-worker.hgtuwb.workers.dev/ChainDB.tar.gz?rootId=0ADIBFuBeqbhbUk9PVA"
-	url2="http://nkndb.pornhub996.com/ChainDB.tar.gz"
+    url2="http://nkndb.pornhub996.com/ChainDB.tar.gz"
     echo -e "停止系统"
     systemctl stop nkn-commercial.service
     echo -e "删掉链包目录"
