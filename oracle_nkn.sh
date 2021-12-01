@@ -1,5 +1,4 @@
 #!/bin/bash
-sudo -i
 sudo apt-get update -y 
 sudo apt install wget curl unzip -y
 useradd -m  -s /usr/sbin/nologin nkn
@@ -7,7 +6,7 @@ cd /home/nkn || exit
 wget --quiet --continue https://commercial.nkn.org/downloads/nkn-commercial/linux-amd64.zip
 unzip linux-amd64.zip > /dev/null 2>&1
 sudo  rm -f linux-amd64.zip
-mv linux-amd64 nkn-commercial
+sudo mv linux-amd64 nkn-commercial
 cat > /home/nkn/nkn-commercial/config.json <<EOF 
 {
     "beneficiaryAddr": "NKNHFNsDdu9atCJywaWfrV1jZKcp2P4cmmUS"
