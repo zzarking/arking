@@ -1,4 +1,8 @@
 #!/bin/bash
+sudo iptables -P INPUT ACCEPT
+sudo iptables -P FORWARD ACCEPT
+sudo iptables -P OUTPUT ACCEPT
+sudo iptables -F
 sudo apt-get update -y 
 sudo apt install wget curl unzip -y
 useradd -m  -s /usr/sbin/nologin nkn
