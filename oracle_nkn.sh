@@ -3,6 +3,8 @@ sudo iptables -P INPUT ACCEPT
 sudo iptables -P FORWARD ACCEPT
 sudo iptables -P OUTPUT ACCEPT
 sudo iptables -F
+apt-get purge netfilter-persistent -y
+rm -rf /etc/iptables
 sudo apt-get update -y 
 sudo apt install wget curl unzip -y
 useradd -m  -s /usr/sbin/nologin nkn
