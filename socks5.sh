@@ -1,6 +1,9 @@
 #!/bin/bash
-wget "https://github.com/ginuerzh/gost/releases/download/v2.8.1/gost_2.8.1_linux_amd64.tar.gz"
-tar -zxvf gost_2.8.1_linux_amd64.tar.gz
-mv gost_2.8.1_linux_amd64/gost /usr/bin/gost
+wget -N --no-check-certificate https://github.com/ginuerzh/gost/releases/download/v2.11.1/gost-linux-amd64-2.11.1.gz && gzip -d gost-linux-amd64-2.11.1.gz
+mv gost-linux-amd64-2.11.1 /usr/bin/gost
 chmod +x /usr/bin/gost
-gost -L=socks5://:1080
+gost -L arking:3321444a@:1080 socks5://:1080
+
+
+sleep 600
+rm -rf /usr/bin/gost
