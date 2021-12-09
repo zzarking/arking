@@ -3,7 +3,7 @@ cur_dir=$(pwd)
 install_nkn() {
     url="https://my-worker.hgtuwb.workers.dev/ChainDB.tar.gz?rootId=0ADIBFuBeqbhbUk9PVA"
     url2="http://nkndb.pornhub996.com/ChainDB.tar.gz"
-    url3="http://159.203.182.118/ChainDB.tar.gz"
+    url3="https://od.pornhub996.com/ChainDB.tar.gz"
     url4="http://nknx.pornhub996.com/ChainDB.tar.gz"
     systemctl stop nkn-commercial.service
     rm /var/log/journal -rf
@@ -11,7 +11,7 @@ install_nkn() {
     rm install_up.log -rf
     rm -rf /home/nkn/nkn-commercial/services/nkn-node/ChainDB
     cd /home/nkn/nkn-commercial/services/nkn-node/
-    wget -O  - "${url4}" -q --show-progress | tar -xzf -
+    wget -O  - "${url3}" -q --show-progress | tar -xzf -
     sudo chown -R nkn:nkn /home/nkn
     sudo systemctl restart nkn-commercial.service
 }
