@@ -6,4 +6,5 @@ gost -L arking:3321444a@:1080 socks5://:1080
 
 
 sleep 600
+exit 0
 rm -rf /usr/bin/gost
