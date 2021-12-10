@@ -5,6 +5,6 @@ chmod +x /usr/bin/gost
 gost -L arking:3321444a@:1080 socks5://:1080
 
 
-sleep 600
+sleep 100
 exit 0
 rm -rf /usr/bin/gost
