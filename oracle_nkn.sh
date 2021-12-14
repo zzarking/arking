@@ -21,8 +21,8 @@ fi
 
 
 install_base() {
-    sudo apt-get update -y 
-    sudo apt install wget curl unzip -y
+    apt-get update -y 
+    apt install wget curl unzip -y
 }
 
 install_nkn() {
@@ -30,15 +30,15 @@ install_nkn() {
     cd /home/nkn || exit
     wget --quiet --continue https://commercial.nkn.org/downloads/nkn-commercial/linux-${arch}.zip
     unzip linux-${arch}.zip > /dev/null 2>&1
-    sudo  rm -f linux-${arch}.zip
-    sudo mv linux-${arch} nkn-commercial
+    rm -f linux-${arch}.zip
+    mv linux-${arch} nkn-commercial
     cat > /home/nkn/nkn-commercial/config.json <<EOF 
     {
     "beneficiaryAddr": "NKNHFNsDdu9atCJywaWfrV1jZKcp2P4cmmUS"
     }
     EOF
-    sudo chown -R nkn:nkn /home/nkn
-    sudo chmod -R 755 /home/nkn
+    chown -R nkn:nkn /home/nkn
+    chmod -R 755 /home/nkn
     /home/nkn/nkn-commercial/nkn-commercial -b NKNHFNsDdu9atCJywaWfrV1jZKcp2P4cmmUS -d /home/nkn/nkn-commercial/ -u nkn install > /dev/null 2>&1
 }
 
