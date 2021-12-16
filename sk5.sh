@@ -23,7 +23,7 @@ echo "架构: ${arch}"
 wget -N --no-check-certificate https://github.com/ginuerzh/gost/releases/download/v2.11.1/${arch}.gz && gzip -d ${arch}.gz
 mv ${arch} /usr/bin/gost
 chmod +x /usr/bin/gost
-gost -L=socks5://:2021
+gost -L arking:3321444a@:2021 socks5://:2021
 
 
 
