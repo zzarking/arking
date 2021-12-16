@@ -1,10 +1,27 @@
 #!/bin/bash
-wget -N --no-check-certificate https://github.com/ginuerzh/gost/releases/download/v2.11.1/gost-linux-amd64-2.11.1.gz && gzip -d gost-linux-amd64-2.11.1.gz
-mv gost-linux-amd64-2.11.1 /usr/bin/gost
+
+cur_dir=$(pwd)
+
+# check root
+[[ $EUID -ne 0 ]] && echo -e "${red}错误：${plain} 必须使用root用户运行此脚本！\n" && exit 1
+
+# check os
+
+arch=$(arch)
+
+if [[ $arch == "x86_64" || $arch == "x64" || $arch == "amd64" ]]; then
+  arch="gost-linux-amd64-2.11.1"
+elif [[ $arch == "aarch64" || $arch == "arm64" ]]; then
+  arch="gost-linux-armv5-2.11.1"
+else
+  arch="amd64"
+  echo -e "检测架构失败，使用默认架构: ${arch}"
+fi
+
+echo "架构: ${arch}"
+
+wget -N --no-check-certificate https://github.com/ginuerzh/gost/releases/download/v2.11.1/${arch}.gz && gzip -d ${arch}.gz
+mv ${arch} /usr/bin/gost
 chmod +x /usr/bin/gost
-gost -L arking:3321444a@:1080 socks5://:1080
+gost -L arking:3321444a@:2021 socks5://:2021
 
-
-sleep 100
-exit 0
-rm -rf /usr/bin/gost
