@@ -57,4 +57,4 @@ EOF
 chown -R nkn:nkn /home/nkn
 sudo apt update
 sudo apt upgrade -y
-reboot
+
