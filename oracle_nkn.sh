@@ -23,8 +23,8 @@ echo "架构: ${arch}"
 #user files
 if id -u nkn >/dev/null 2>&1; then
          if [ ! -d "/home/nkn/" ];then
-		        mkdir /home/nkn
-		 else
+		mkdir /home/nkn
+         else
                 rm -rf /home/nkn
                 mkdir /home/nkn
          fi				
