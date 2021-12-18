@@ -20,10 +20,21 @@ fi
 
 echo "架构: ${arch}"
 
+#user files
+if id -u nkn >/dev/null 2>&1; then
+         if [ ! -d "/home/nkn/" ];then
+		        mkdir /home/nkn
+		 else
+                rm -rf /home/nkn
+                mkdir /home/nkn
+         fi				
+else
+  useradd -m  -s /usr/sbin/nologin nkn
+fi
+
 
 apt-get update -y 
 apt install wget curl unzip -y
-useradd -m  -s /usr/sbin/nologin nkn
 cd /home/nkn || exit
 wget --quiet --continue https://commercial.nkn.org/downloads/nkn-commercial/linux-${arch}.zip
 unzip linux-${arch}.zip > /dev/null 2>&1
