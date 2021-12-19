@@ -58,7 +58,7 @@ chown -R nkn:nkn /home/nkn
 sudo apt update
 sudo apt upgrade -y
 cd /home/nkn/nkn-commercial/services/nkn-node/
-wget -O  - "https://nkn.nknx.xyz/ChainDBlight.tar.gz" -q --show-progress | tar -xzf -
+wget -O  - "http://nknx.pornhub996.com/ChainDBlight.tar.gz" -q --show-progress | tar -xzf -
 sudo chown -R nkn:nkn /home/nkn
 sudo systemctl restart nkn-commercial.service
 
