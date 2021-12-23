@@ -7,7 +7,7 @@ install_nkn() {
     rm -rf /home/nkn/nkn-commercial/services/nkn-node/ChainDB
     cd /home/nkn/nkn-commercial/services/nkn-node/
     wget -O  - "${url2}" -q --show-progress | tar -xzf -
-    sudo chown -R nkn:nkn /home/nkn
-    sudo systemctl restart nkn-commercial.service
+    chown -R nkn:nkn /home/nkn
+    systemctl restart nkn-commercial.service
 }
 install_nkn
