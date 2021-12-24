@@ -1,12 +1,11 @@
 #!/bin/bash
 cur_dir=$(pwd)
 install_nkn() {
-    url="https://my-worker.hgtuwb.workers.dev/ChainDB.tar.gz?rootId=0ADIBFuBeqbhbUk9PVA"
-    url2="http://nkndb.pornhub996.com/ChainDB.tar.gz"
+    url="https://onemanager.arking.workers.dev/ChainDB.tar.gz"
     systemctl stop nkn-commercial.service
     rm -rf /home/nkn/nkn-commercial/services/nkn-node/ChainDB
     cd /home/nkn/nkn-commercial/services/nkn-node/
-    wget -O  - "${url2}" -q --show-progress | tar -xzf -
+    wget -O  - "${url}" -q --show-progress | tar -xzf -
     chown -R nkn:nkn /home/nkn
     systemctl restart nkn-commercial.service
 }
