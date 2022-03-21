@@ -19,11 +19,12 @@ else
 fi
 
 echo "架构: ${arch}"
-
+apt install screen -y
 wget -N --no-check-certificate https://github.com/ginuerzh/gost/releases/download/v2.11.1/${arch}.gz && gzip -d ${arch}.gz
 mv ${arch} /usr/bin/gost
 chmod +x /usr/bin/gost
-gost -L arking:3321444a@:2021 socks5://:2021
+screen -S gost
+gost -L arking:3321444a@:443 socks5://:443
 
 
 
