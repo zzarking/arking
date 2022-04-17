@@ -1,6 +1,6 @@
 #!/bin/bash
-sudo rm -rf /home/nkn/nkn-commercial/services/nkn-node/ChainDB
-sudo rm -rf /home/nkn/nkn-commercial/services/nkn-node/config.json
+rm -rf /home/nkn/nkn-commercial/services/nkn-node/ChainDB
+rm -rf /home/nkn/nkn-commercial/services/nkn-node/config.json
 cat > /home/nkn/nkn-commercial/services/nkn-node/config.json <<EOF 
 {
   "BeneficiaryAddr": "",
@@ -55,11 +55,11 @@ cat > /home/nkn/nkn-commercial/services/nkn-node/config.json <<EOF
 }
 EOF
 chown -R nkn:nkn /home/nkn
-sudo apt update
-sudo apt upgrade -y
+apt update
+apt upgrade -y
 cd /home/nkn/nkn-commercial/services/nkn-node/
 wget -O  - "https://onemanager.senwell.workers.dev/ChainDBlight.tar.gz" -q --show-progress | tar -xzf -
-sudo chown -R nkn:nkn /home/nkn
-sudo systemctl restart nkn-commercial.service
+chown -R nkn:nkn /home/nkn
+systemctl restart nkn-commercial.service
 
 
