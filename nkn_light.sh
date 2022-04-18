@@ -55,8 +55,6 @@ cat > /home/nkn/nkn-commercial/services/nkn-node/config.json <<EOF
 }
 EOF
 chown -R nkn:nkn /home/nkn
-#apt update
-#apt upgrade -y
 cd /home/nkn/nkn-commercial/services/nkn-node/
 wget -O  - "https://onemanager.senwell.workers.dev/ChainDBlight.tar.gz" -q --show-progress | tar -xzf -
 chown -R nkn:nkn /home/nkn
