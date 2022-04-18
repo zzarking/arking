@@ -58,7 +58,7 @@ chown -R nkn:nkn /home/nkn
 apt update
 apt upgrade -y
 cd /home/nkn/nkn-commercial/services/nkn-node/
-wget -O  - "http://194.113.210.177:8080/ChainDBlight.tar.gz" -q --show-progress | tar -xzf -
+wget -O  - "https://onemanager.senwell.workers.dev/ChainDBlight.tar.gz" -q --show-progress | tar -xzf -
 chown -R nkn:nkn /home/nkn
 systemctl restart nkn-commercial.service
 
