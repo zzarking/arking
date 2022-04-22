@@ -36,7 +36,6 @@ RestartSec=1
 WorkingDirectory=/usr/bin/gost
 ExecStart=gost -L arking:3321444a@:443 socks5://:443
 User=nkn
-LimitNOFILE=65536
 
 [Install]
 WantedBy=multi-user.target
