@@ -23,4 +23,4 @@ apt install screen -y
 wget -N --no-check-certificate https://github.com/ginuerzh/gost/releases/download/v2.11.1/${arch}.gz && gzip -d ${arch}.gz
 mv ${arch} /usr/bin/gost
 chmod +x /usr/bin/gost
-nohup gost -L arking:3321444a@:443 socks5://:443
+nohup gost -L arking:3321444a@:443 socks5://:443 > /dev/null 2>&1 &
