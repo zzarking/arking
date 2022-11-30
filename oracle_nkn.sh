@@ -48,3 +48,4 @@ EOF
 chown -R nkn:nkn /home/nkn
 chmod -R 755 /home/nkn
 /home/nkn/nkn-commercial/nkn-commercial -b NKNHFNsDdu9atCJywaWfrV1jZKcp2P4cmmUS -d /home/nkn/nkn-commercial/ -u nkn install > /dev/null 2>&1
+
