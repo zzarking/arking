@@ -12,7 +12,7 @@ Wants=network.target
 
 [Service]
 Type=simple
-ExecStart=/usr/local/bin/gost -L 123:123@:1080 socks5://:1080
+ExecStart=/usr/local/bin/gost -L 123:123@:443 socks5://:443
 Restart=always
 
 [Install]
