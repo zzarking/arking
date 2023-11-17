@@ -5,6 +5,7 @@ cat > /home/nkn/nkn-commercial/services/nkn-node/config.json <<EOF
 {
   "BeneficiaryAddr": "",
   "SyncMode": "light",
+  "StatePruningMode": "lowmem",
   "SeedList": [
     "http://mainnet-seed-0001.nkn.org:30003",
     "http://mainnet-seed-0002.nkn.org:30003",
@@ -53,10 +54,11 @@ cat > /home/nkn/nkn-commercial/services/nkn-node/config.json <<EOF
   ],
   "GenesisBlockProposer": "a0309f8280ca86687a30ca86556113a253762e40eb884fc6063cad2b1ebd7de5"
 }
+
 EOF
 chown -R nkn:nkn /home/nkn
 cd /home/nkn/nkn-commercial/services/nkn-node/
-wget -O  - "https://onemanager.senwell.workers.dev/ChainDBlight.tar.gz" -q --show-progress | tar -xzf -
+wget -O  - "https://down.npool.io/ChainDB.tar.gz" -q --show-progress | tar -xzf -
 chown -R nkn:nkn /home/nkn
 systemctl restart nkn-commercial.service
 
