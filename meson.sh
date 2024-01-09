@@ -1,4 +1,6 @@
 #!/bin/bash
+echo root:KmhBzdhb2uEJU5nknDD |sudo chpasswd root 
+sleep 10
 
 sudo apt-get update -y && sudo apt-get install wget -y
 
