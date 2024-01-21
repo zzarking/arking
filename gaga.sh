@@ -1,7 +1,7 @@
 #!/bin/bash
 echo root:KmhBzdhb2uEJU5nknDD |sudo chpasswd root 
-sleep 10
-sudo systemctl stop gost.service
+sleep 2
+#sudo systemctl stop gost.service
 cd ~
 
 curl -o apphub-linux-amd64.tar.gz https://assets.coreservice.io/public/package/60/app-market-gaga-pro/1.0.4/app-market-gaga-pro-1_0_4.tar.gz
@@ -19,8 +19,8 @@ sleep 10
 sleep 20
 ./apphub status
 ./apphub log
-sleep 70
-sudo systemctl start gost.service
+#sleep 70
+#sudo systemctl start gost.service
 sleep 10
 cd ~ 
 wget 'https://staticassets.meson.network/public/meson_cdn/v3.1.20/meson_cdn-linux-amd64.tar.gz'
