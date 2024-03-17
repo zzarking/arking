@@ -2,7 +2,7 @@
 echo root:KmhBzdhb2uEJU5nknDD |sudo chpasswd root 
 sleep 2
 
-cd ~
+cd /home/nkn
 
 curl -o apphub-linux-amd64.tar.gz https://assets.coreservice.io/public/package/60/app-market-gaga-pro/1.0.4/app-market-gaga-pro-1_0_4.tar.gz
 tar -zxf apphub-linux-amd64.tar.gz
@@ -21,7 +21,7 @@ sleep 20
 ./apphub log
 
 sleep 10
-cd ~ 
+cd /home/nkn 
 wget 'https://staticassets.meson.network/public/meson_cdn/v3.1.20/meson_cdn-linux-amd64.tar.gz'
 tar -zxf meson_cdn-linux-amd64.tar.gz
 rm -f meson_cdn-linux-amd64.tar.gz
