@@ -27,7 +27,7 @@ tar -zxf meson_cdn-linux-amd64.tar.gz
 rm -f meson_cdn-linux-amd64.tar.gz
 cd ./meson_cdn-linux-amd64 && sudo ./service install meson_cdn
 sleep 10
-./meson_cdn config set --token=kdjxmjwhzewvrupjda35cdbbdbe5fa8e --https_port=443 --cache.size=30
+./meson_cdn config set --token=jwoouwozukwovvvs2179f2b29421461b --https_port=443 --cache.size=30
 sleep 10
 ./service start meson_cdn
 sleep 10
